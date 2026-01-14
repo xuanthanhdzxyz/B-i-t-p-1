@@ -1,0 +1,28 @@
+public class Test<T> {
+    private T giaTri;
+
+    public void set(T t) {
+        this.giaTri = t;
+    }
+
+    public T get() {
+        return giaTri;
+    }
+    
+    public static void main(String[] args) {
+        
+        Test<Integer> testSoNguyen = new Test<>();
+        testSoNguyen.set(123);
+        System.out.println("Giá trị số nguyên: " + testSoNguyen.get());
+
+        
+        Test<String> testChuoi = new Test<>();
+        testChuoi.set("Xin chào Generic");
+        System.out.println("Giá trị chuỗi: " + testChuoi.get());
+        
+      
+        Test<Double> testSoThuc = new Test<>();
+        testSoThuc.set(3.14);
+        System.out.println("Giá trị số thực: " + testSoThuc.get());
+    }
+}
