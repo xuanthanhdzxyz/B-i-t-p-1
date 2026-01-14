@@ -1,0 +1,39 @@
+interface Pair<K, V> {
+    K getKey();
+    V getValue();
+}
+
+class OrderedPair<K, V> implements Pair<K, V> {
+    private K key;
+    private V value;
+
+    public OrderedPair(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    @Override
+    public K getKey() {
+        return key;
+    }
+
+    @Override
+    public V getValue() {
+        return value;
+    }
+
+public class Bai3 {
+    public static void main(String[] args) {
+
+        Pair<String, Integer> p1 = new OrderedPair<>("MSSV", 10170);
+        Pair<String, String> p2 = new OrderedPair<>("HoTen", "Dao Xuan Thanh");
+
+        System.out.println("Pair 1:");
+        System.out.println("Key: " + p1.getKey());
+        System.out.println("Value: " + p1.getValue());
+
+        System.out.println("\nPair 2:");
+        System.out.println("Key: " + p2.getKey());
+        System.out.println("Value: " + p2.getValue());
+    }
+}
